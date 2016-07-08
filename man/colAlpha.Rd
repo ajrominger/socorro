@@ -14,6 +14,9 @@ pointing left if side is 1 or 3)}
 
 \item{...}{arguments passed to function \code{arrows}}
 }
+\value{
+A character vector of the desired colors
+}
 \description{
 Add arrows to axes to indicate direction
 }

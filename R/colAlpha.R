@@ -10,6 +10,8 @@
 #' pointing left if side is 1 or 3)
 #' @param ... arguments passed to function \code{arrows}
 #' 
+#' @return A character vector of the desired colors
+#' 
 #' @examples
 #' ## demonstrates use of the alpha argument: we can specify simple colors and use them in plots
 #' ## along with semi-transparent versions of them
