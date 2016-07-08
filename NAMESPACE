@@ -2,3 +2,10 @@
 
 export(axisArrows)
 export(colAlpha)
+export(denFill)
+export(kurt)
+export(logAxis)
+export(paleoAxis)
+export(simpECDF)
+export(skew)
+export(wald)
