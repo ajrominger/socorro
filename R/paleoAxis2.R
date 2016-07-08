@@ -62,7 +62,7 @@ paleoAxis <- function(side=1,showQ=FALSE,lspace=1.5) {
 	mtext(new.name,side=side,line=0.25,at=tat)
 }
 
-par(mar=c(4,4,4,4),mgp=c(3,1,0),xpd=NA)
-plot(1,xlim=c(650,0),ylim=c(650,100),axes=FALSE)
-paleoAxis(1)
-paleoAxis(2)
+# par(mar=c(4,4,4,4),mgp=c(3,1,0),xpd=NA)
+# plot(1,xlim=c(650,0),ylim=c(650,100),axes=FALSE)
+# paleoAxis(1)
+# paleoAxis(2)
