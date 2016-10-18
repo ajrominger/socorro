@@ -6,6 +6,8 @@
 #' powers of 10 receive a short tick and no label
 #' 
 #' @param side the side on which to add an axis (following \code{axis})
+#' @param expLab logical, should axis labels be in exponential form (e.g. \eqn{10^1}; \code{expLab = TRUE}) 
+#' or in standard form (\code{expLab = FALSE}, the default)
 #' @param ... arguments passed to \code{axis}
 #' 
 #' @examples
@@ -16,15 +18,23 @@
 #' @seealso axis, plot
 #' @export
 
-logAxis <- function(side, ...) {
-	if(side %in% c(1, 3)) usr <- graphics::par('usr')[1:2]
-	if(side %in% c(2, 4)) usr <- graphics::par('usr')[3:4]
+logAxis <- function(side, expLab = FALSE, ...) {
+	if(side %in% c(1, 3)) {
+	    usr <- graphics::par('usr')[1:2]
+	} else {
+	    usr <- graphics::par('usr')[3:4]
+	}
 	
 	maj.minX <- ceiling(usr[1])
 	maj.maxX <- floor(usr[2])
 	
-	if(side %in% c(1, 3)) graphics::axis(side, xaxp=c(10^maj.minX, 10^maj.maxX, 1), ...)
-	if(side %in% c(2, 4)) graphics::axis(side, yaxp=c(10^maj.minX, 10^maj.maxX, 1), ...)
+	if(expLab) {
+	    labels <- sapply(maj.minX:maj.maxX, function(p) eval(substitute(expression(10^p), list(p = p))))
+	} else {
+	    labels <- TRUE
+	}
+	
+	graphics::axis(side, at=10^(maj.minX:maj.maxX), labels = labels, ...)
 	
 	if(maj.minX - usr[1] >= log(2, 10)) {
 		min.incX <- rep(log(2:9, 10), length(maj.minX:maj.maxX)+1)

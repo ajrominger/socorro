@@ -4,10 +4,13 @@
 \alias{logAxis}
 \title{Log axes}
 \usage{
-logAxis(side, ...)
+logAxis(side, expLab = FALSE, ...)
 }
 \arguments{
 \item{side}{the side on which to add an axis (following \code{axis})}
+
+\item{expLab}{logical, should axis labels be in exponential form (e.g. \eqn{10^1}; \code{expLab = TRUE}) 
+or in standard form (\code{expLab = FALSE}, the default)}
 
 \item{...}{arguments passed to \code{axis}}
 }
