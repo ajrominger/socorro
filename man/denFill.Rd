@@ -29,7 +29,7 @@ Plot the interpolated density of data (most likely results from a Monte Carlo si
 or estimation) along with a confidence interval (specified by \code{alpha}) shadded in.
 }
 \details{
-This function can plot desnity and quantiles for any vector and would be well suited for bootstrapping,
+This function can plot desnity and quantiles for any vector and would be well suited for bootstrapping, 
 permutational null models and also credible intervals from Bayesian MCMC samples
 }
 \examples{

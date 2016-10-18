@@ -7,22 +7,18 @@
 colAlpha(col, alpha = 1)
 }
 \arguments{
-\item{side}{numeric indicating which sides(s) to put arrows on (following convention of \code{axis})}
+\item{col}{the color to be modified}
 
-\item{backward}{logical, should the arrow be backwards (i.e. pointing down if side is 2 or 4, or 
-pointing left if side is 1 or 3)}
-
-\item{...}{arguments passed to function \code{arrows}}
+\item{alpha}{the alpha level to be added}
 }
 \value{
 A character vector of the desired colors
 }
 \description{
-Add arrows to axes to indicate direction
+Make any color have transparancy by adding an alpha chanel
 }
 \details{
-This function puts arrows in the margin space and will try to fit the arrows nicely, 
-but assumes some space has been left for them (e.g. through \code{mar} argument to \code{par})
+This function converts a color to red, blue, green components and then adds the desired alpha level
 }
 \examples{
 ## demonstrates use of the alpha argument: we can specify simple colors and use them in plots
