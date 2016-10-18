@@ -1,14 +1,11 @@
 #' @title Add an alpha chanel to any color
 #'  
-#' @description Add arrows to axes to indicate direction
+#' @description Make any color have transparancy by adding an alpha chanel
 #' 
-#' @details This function puts arrows in the margin space and will try to fit the arrows nicely, 
-#' but assumes some space has been left for them (e.g. through \code{mar} argument to \code{par})
+#' @details This function converts a color to red, blue, green components and then adds the desired alpha level
 #' 
-#' @param side numeric indicating which sides(s) to put arrows on (following convention of \code{axis})
-#' @param backward logical, should the arrow be backwards (i.e. pointing down if side is 2 or 4, or 
-#' pointing left if side is 1 or 3)
-#' @param ... arguments passed to function \code{arrows}
+#' @param col the color to be modified
+#' @param alpha the alpha level to be added
 #' 
 #' @return A character vector of the desired colors
 #' 
