@@ -20,7 +20,7 @@
 #' @seealso ecdf, cumsum
 #' @export
 
-simpECDF <- function(x, complement=FALSE) {
+simpECDF <- function(x, complement = FALSE) {
 	if(is.table(x)) {
 		tabz <- x
 	} else {
@@ -34,5 +34,5 @@ simpECDF <- function(x, complement=FALSE) {
 	}
 	xval <- as.numeric(names(tabz))
 	
-	return(cbind('x'=rev(xval), 'cdf(x)'=rev(yval)))
+	return(cbind('x' = rev(xval), 'cdf(x)' = rev(yval)))
 }

@@ -17,9 +17,9 @@
 #' @seealso mean, var, skew
 #' @export
 
-kurt <- function(x, na.rm=FALSE) {
-	xdiff <- x - mean(x, na.rm=na.rm)
-	m4 <- mean(xdiff^4, na.rm=na.rm)
-	m2 <- mean(xdiff^2, na.rm=na.rm)
+kurt <- function(x, na.rm = FALSE) {
+	xdiff <- x - mean(x, na.rm = na.rm)
+	m4 <- mean(xdiff^4, na.rm = na.rm)
+	m2 <- mean(xdiff^2, na.rm = na.rm)
 	m4/(m2^2) - 3
 }

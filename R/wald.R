@@ -21,18 +21,18 @@
 #' @seealso optim, nlm
 #' @export
 
-wald <- function(mle, hessian, alpha=0.05, marginal=TRUE) {
+wald <- function(mle, hessian, alpha = 0.05, marginal = TRUE) {
 	if(!marginal) {
 	    var.cov <- solve(hessian)
 	    
-	    out <- ellipse::ellipse(var.cov, centre=mle, level=1-alpha)
+	    out <- ellipse::ellipse(var.cov, centre = mle, level = 1-alpha)
 	    
 	    return(out)
 	} else {
 	    se <- sqrt(diag(solve(hessian)))
 	    zcrit <- stats::qnorm(1-alpha/2)
 	    
-	    out <- matrix(c(mle-zcrit*se, mle+zcrit*se), nrow=length(mle))
+	    out <- matrix(c(mle-zcrit*se, mle+zcrit*se), nrow = length(mle))
 	    colnames(out) <- paste(c(alpha/2, 1-alpha/2)*100, '%', sep='')
 	    
 	    return(out)
