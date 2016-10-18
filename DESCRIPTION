@@ -17,7 +17,8 @@ Imports:
     graphics,
     stats,
     grDevices,
-    ellipse
+    ellipse,
+    ape
 Suggests:
     testthat
 RoxygenNote: 5.0.1
