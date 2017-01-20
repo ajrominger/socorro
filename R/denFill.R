@@ -1,10 +1,12 @@
 #' @title Density plot with confidence interval filled in
 #'  
-#' @description Plot the interpolated density of data (most likely results from a Monte Carlo simulation 
-#' or estimation) along with a confidence interval (specified by \code{alpha}) shadded in.
+#' @description Plot the interpolated density of data (most likely results from a Monte Carlo 
+#' simulation or estimation) along with a confidence interval (specified by \code{alpha}) 
+#' shadded in.
 #' 
-#' @details This function can plot desnity and quantiles for any vector and would be well suited for bootstrapping, 
-#' permutational null models and also credible intervals from Bayesian MCMC samples
+#' @details This function can plot desnity and quantiles for any vector and would be well 
+#' suited for bootstrapping, permutational null models and also credible intervals from 
+#' Bayesian MCMC samples
 #' 
 #' @param dist numeric vector for which density is to be plotted
 #' @param alpha critical value
@@ -43,12 +45,13 @@ denFill <- function(dist, alpha = 0.05, alternative  =  c('two.sided', 'less', '
     y1.cord <- c(0, temp1.mid[, 2], 0)
     
     ##	compute color
-    coll <- colAlpha(col, transp)
+    colp <- colAlpha(col, transp)
     
     polygon(x1.cord, y1.cord, col = colp, border = NA)
-    segments(min(temp1.mid[, 1]), 0, min(temp1.mid[, 1]), temp1.mid[1, 2], col = coll)
-    segments(max(temp1.mid[, 1]), 0, max(temp1.mid[, 1]), temp1.mid[length(temp1.mid[, 2]), 2], col = coll)
+    segments(min(temp1.mid[, 1]), 0, min(temp1.mid[, 1]), temp1.mid[1, 2], col = col)
+    segments(max(temp1.mid[, 1]), 0, max(temp1.mid[, 1]), temp1.mid[length(temp1.mid[, 2]), 2], 
+             col = col)
     
     ## add lines last for better visual presentation
-    lines(temp1, lwd = lwd, col = coll)
+    lines(temp1, lwd = lwd, col = col)
 }
