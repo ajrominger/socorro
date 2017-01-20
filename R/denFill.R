@@ -43,7 +43,7 @@ denFill <- function(dist, alpha = 0.05, alternative  =  c('two.sided', 'less', '
     y1.cord <- c(0, temp1.mid[, 2], 0)
     
     ##	compute color
-    coll <- colAlpha(col, transp)
+    colp <- colAlpha(col, transp)
     
     polygon(x1.cord, y1.cord, col = colp, border = NA)
     segments(min(temp1.mid[, 1]), 0, min(temp1.mid[, 1]), temp1.mid[1, 2], col = coll)
