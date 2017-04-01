@@ -25,12 +25,14 @@ denFill(dist, alpha = 0.05, alternative = c("two.sided", "less", "greater"),
 \item{...}{further arguments passed to \code{plot}}
 }
 \description{
-Plot the interpolated density of data (most likely results from a Monte Carlo simulation 
-or estimation) along with a confidence interval (specified by \code{alpha}) shadded in.
+Plot the interpolated density of data (most likely results from a Monte Carlo 
+simulation or estimation) along with a confidence interval (specified by \code{alpha}) 
+shadded in.
 }
 \details{
-This function can plot desnity and quantiles for any vector and would be well suited for bootstrapping, 
-permutational null models and also credible intervals from Bayesian MCMC samples
+This function can plot desnity and quantiles for any vector and would be well 
+suited for bootstrapping, permutational null models and also credible intervals from 
+Bayesian MCMC samples
 }
 \examples{
 x <- rnorm(100)
