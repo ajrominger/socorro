@@ -33,6 +33,7 @@ denFill <- function(dist, alpha = 0.05, alternative  =  c('two.sided', 'less', '
     ## specify the densities
     den1 <- stats::density(dist)
     quant1 <- stats::quantile(dist, c(alpha/2, 1-alpha/2))
+    if(alpha == 0) quant1 <- range(den1$x)
     
     ## establish plot window, axes, etc.
     if(!add) graphics::plot(den1, col = 'transparent', ...)
