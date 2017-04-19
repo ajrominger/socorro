@@ -4,7 +4,7 @@
 \alias{rmd2r}
 \title{Convert .Rmd file to a ready to run .R script}
 \usage{
-rmd2r(x, file, noPlots = TRUE)
+rmd2r(x, file, noPlots = TRUE, rmTags = TRUE, stripMD = FALSE)
 }
 \arguments{
 \item{x}{the Rmd file}
@@ -12,6 +12,10 @@ rmd2r(x, file, noPlots = TRUE)
 \item{file}{the file to write to, defaults to same name as \code{x} but appended with '.R'}
 
 \item{noPlots}{logical, should plotting chunks be commented out}
+
+\item{rmTags}{logical, should code chunk tags be removed}
+
+\item{stripMD}{logical, should markdown text be removed}
 }
 \description{
 Converts markdown text to comments (following roxygen protocol) and optionally
