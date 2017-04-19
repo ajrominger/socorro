@@ -18,7 +18,8 @@ Converts markdown text to comments (following roxygen protocol) and optionally
 comments out code chunks that produce plots.
 }
 \details{
-This function is inspired by code from Kevin Keena (http://rstudio-pubs-static.s3.amazonaws.com/12734_0a38887f19a34d92b7311a2c9cb15022.html).
+This function is inspired by code from Kevin Keena 
+(http://rstudio-pubs-static.s3.amazonaws.com/12734_0a38887f19a34d92b7311a2c9cb15022.html).
 However, \code{rmd2r} is a complete re-write and adds the functionallity to specify a file 
 in which to write the outpu and also the option to comment out plotting chunks (useful, 
 e.g., if you'd like to run the script in the background)
