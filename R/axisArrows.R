@@ -8,6 +8,7 @@
 #' @param side numeric indicating which sides(s) to put arrows on (following convention of \code{axis})
 #' @param backward logical, should the arrow be backwards (i.e. pointing down if side is 2 or 4, or 
 #' pointing left if side is 1 or 3)
+#' @param offset numeric given the proportion by which to offset the start and end of the arrow from the plot edges
 #' @param ... arguments passed to function \code{arrows}
 #' 
 #' @examples
@@ -18,7 +19,7 @@
 #' @seealso axis, arrows, logAxis
 #' @export
 
-axisArrows <- function(side=1:2, backward=FALSE, ...) {
+axisArrows <- function(side = 1:2, backward = FALSE, offset = 0.1, ...) {
     usr <- graphics::par('usr')
     
     if(graphics::par('xlog')) usr[1:2] <- 10^usr[1:2]
@@ -34,17 +35,17 @@ axisArrows <- function(side=1:2, backward=FALSE, ...) {
     
     graphics::par(xpd=NA)
     
-    if(1 %in% side) graphics::arrows(x0=xx[1] + 0.1*diff(xx), y0=min(yy) - 0.04*diff(yy), 
-                                     x1=xx[2] - 0.1*diff(xx), ...)
+    if(1 %in% side) graphics::arrows(x0=xx[1] + offset*diff(xx), y0=min(yy) - 0.04*diff(yy), 
+                                     x1=xx[2] - offset*diff(xx), ...)
     
-    if(3 %in% side) graphics::arrows(x0=xx[1]+0.1*diff(xx), y0=max(yy) + 0.04*diff(yy), 
-                                     x1=xx[2]-0.1*diff(xx), ...)
+    if(3 %in% side) graphics::arrows(x0=xx[1]+offset*diff(xx), y0=max(yy) + 0.04*diff(yy), 
+                                     x1=xx[2]-offset*diff(xx), ...)
     
-    if(2 %in% side) graphics::arrows(x0=min(xx) - 0.04*diff(xx), y0=yy[1] + 0.1*diff(yy),
-                                     y1=yy[2] - 0.1*diff(yy), ...)
+    if(2 %in% side) graphics::arrows(x0=min(xx) - 0.04*diff(xx), y0=yy[1] + offset*diff(yy),
+                                     y1=yy[2] - offset*diff(yy), ...)
     
-    if(4 %in% side) graphics::arrows(x0=max(xx) + 0.04*diff(xx), y0=yy[1] + 0.1*diff(yy),
-                                     y1=yy[2] - 0.1*diff(yy), ...)
+    if(4 %in% side) graphics::arrows(x0=max(xx) + 0.04*diff(xx), y0=yy[1] + offset*diff(yy),
+                                     y1=yy[2] - offset*diff(yy), ...)
     
     graphics::par(xpd=FALSE)
 }

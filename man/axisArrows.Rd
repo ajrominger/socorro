@@ -4,13 +4,15 @@
 \alias{axisArrows}
 \title{Axis arrows}
 \usage{
-axisArrows(side = 1:2, backward = FALSE, ...)
+axisArrows(side = 1:2, backward = FALSE, offset = 0.1, ...)
 }
 \arguments{
 \item{side}{numeric indicating which sides(s) to put arrows on (following convention of \code{axis})}
 
 \item{backward}{logical, should the arrow be backwards (i.e. pointing down if side is 2 or 4, or 
 pointing left if side is 1 or 3)}
+
+\item{offset}{numeric given the proportion by which to offset the start and end of the arrow from the plot edges}
 
 \item{...}{arguments passed to function \code{arrows}}
 }
