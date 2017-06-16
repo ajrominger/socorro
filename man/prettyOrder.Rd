@@ -23,10 +23,9 @@ tre <- prettyOrder(tre)
 ape::plot.phylo(tre)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 ape::rotate
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

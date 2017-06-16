@@ -26,10 +26,9 @@ paleoAxis(1)
 paleoAxis(2)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 axis, plot
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

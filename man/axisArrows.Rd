@@ -28,10 +28,9 @@ plot(1)
 axisArrows(side=1:2, length=0.1)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 axis, arrows, logAxis
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

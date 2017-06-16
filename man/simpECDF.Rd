@@ -28,10 +28,9 @@ x <- rnorm(100)
 plot(simpECDF(x))
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 ecdf, cumsum
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

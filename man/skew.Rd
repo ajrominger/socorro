@@ -25,10 +25,9 @@ x <- rnorm(100)
 skew(x)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 mean, var, kurt
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

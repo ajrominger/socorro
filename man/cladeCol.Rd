@@ -29,10 +29,9 @@ phy <- read.tree(text="(A,(C,G));")
 plot(phy, edge.color=clade.col(phy, list("A",c("C","G")),c("red","blue")))
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 phylo, plot.phylo
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

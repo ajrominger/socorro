@@ -27,10 +27,9 @@ cols <- c('red', 'blue', 'green')
 plot(1:3, col=cols, bg=colAlpha(cols, alpha=c(0.7, 0.4, 0.1)), pch=21, cex=2, lwd=2)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 hsv, rgb, col2rgb
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

@@ -26,10 +26,9 @@ plot(1, xlim=c(1, 100), xaxt='n')
 logAxis(1)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 axis, plot
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

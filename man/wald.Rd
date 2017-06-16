@@ -28,10 +28,9 @@ Can calcuate either a Wald CI for a single parameter or multiple parameters. The
 \code{hessian} arguments can be obtained from numerical optimization of the likelihood function using, 
 e.g., \code{optim} or \code{nlm}
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 optim, nlm
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

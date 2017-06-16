@@ -31,10 +31,9 @@ x <- 1:10
 plot(x, col = quantCol(x, c('blue', 'red')))
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 colorRamp
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}

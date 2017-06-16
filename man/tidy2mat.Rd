@@ -25,4 +25,3 @@ See description
 \author{
 Andy Rominger <ajrominger@gmail.com>
 }
-

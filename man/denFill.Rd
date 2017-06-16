@@ -39,10 +39,9 @@ x <- rnorm(100)
 denFill(x)
 
 }
-\author{
-Andy Rominger <ajrominger@gmail.com>
-}
 \seealso{
 density, quantile
 }
-
+\author{
+Andy Rominger <ajrominger@gmail.com>
+}
