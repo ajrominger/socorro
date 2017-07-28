@@ -7,7 +7,7 @@
 #' 
 #' @param x the quantitative variable to be assigned colors
 #' @param pal the colors to be supplied to colorRamp
-#' @param trans 
+#' @param trans the transformation to use on \code{x}
 #' @param xlim limits on the variable x, can be omitted, in which case the range of x is used
 #' 
 #' @return A character vector of the desired colors
