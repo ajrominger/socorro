@@ -7,9 +7,11 @@
 logAxis(side, expLab = FALSE, ...)
 }
 \arguments{
-\item{side}{the side on which to add an axis (following \code{axis})}
+\item{side}{the side on which to add an axis (following \code{axis}, but taking vectors
+of length grater than 1, e.g. \code{1:2})}
 
-\item{expLab}{logical, should axis labels be in exponential form (e.g. \eqn{10^1}; \code{expLab = TRUE}) 
+\item{expLab}{logical, should axis labels be in exponential form (e.g. \eqn{10^1}; 
+\code{expLab = TRUE}) 
 or in standard form (\code{expLab = FALSE}, the default)}
 
 \item{...}{arguments passed to \code{axis}}
@@ -18,8 +20,8 @@ or in standard form (\code{expLab = FALSE}, the default)}
 Add good looking log scale axes to a plot
 }
 \details{
-Powers of 10 receive a long tick mark and an axis label while integers that are not 
-powers of 10 receive a short tick and no label
+Powers of 10 receive a long tick mark and an axis label while integers that 
+are not powers of 10 receive a short tick and no label
 }
 \examples{
 plot(1, xlim=c(1, 100), xaxt='n')
