@@ -12,7 +12,7 @@ quantCol(x, pal, trans = c("linear", "log", "quadratic", "cubic"),
 
 \item{pal}{the colors to be supplied to colorRamp}
 
-\item{trans}{}
+\item{trans}{the transformation to use on \code{x}}
 
 \item{xlim}{limits on the variable x, can be omitted, in which case the range of x is used}
 }
