@@ -20,7 +20,8 @@
 #' @seealso colorRamp
 #' @export
 
-quantCol <- function(x, pal, trans = c('linear', 'log', 'quadratic', 'cubic'), xlim = NULL) {
+quantCol <- function(x, pal, trans = c('linear', 'log', 'quadratic', 'cubic'), 
+                     xlim = NULL) {
     trans <- match.arg(trans, c('linear', 'log', 'quadratic', 'cubic'))
     
     ## generate function to transform data
@@ -31,7 +32,7 @@ quantCol <- function(x, pal, trans = c('linear', 'log', 'quadratic', 'cubic'), x
                    'cubic' = function(x) x^3)
     
     ## calculate limits on x variable
-    if(is.null(xlim)) xlim <- range(x)
+    if(is.null(xlim)) xlim <- range(x, na.rm = TRUE)
     
     ## linearly scale transformed x to be bounded [0, 1]
     y <- 1 / diff(range(tfun(xlim))) * (tfun(x) - min(tfun(xlim)))
