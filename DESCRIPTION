@@ -17,6 +17,7 @@ Imports:
     graphics,
     stats,
     grDevices,
+    scales,
     ellipse,
     ape
 Suggests:
