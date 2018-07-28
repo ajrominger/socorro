@@ -42,7 +42,7 @@ quantCol <- function(x, pal, trans = c('linear', 'log', 'quadratic', 'cubic'),
     y[yna] <- 0
     
     ## generate colors
-    out <- rgb(grDevices::colorRamp(pal)(y), maxColorValue = 255)
+    out <- scales::gradient_n_pal(pal)(y)
     
     ## make missing values transparent
     out[yna] <- 'transparent'
