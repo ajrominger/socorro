@@ -56,7 +56,7 @@ cladeCol <- function(phy, clades,cols, bg.col=par("fg")) {
     
     ## now must account for single taxon clades
     these.sing <- which(sapply(clades, length) == 1) # clade indeces
-    print(these.sing)
+    
     if(length(these.sing) > 0) {
         sing.tax <- unlist(clades[these.sing])	# taxon names
         sing.col <- cols[these.sing]
