@@ -4,8 +4,9 @@
 \alias{denFill}
 \title{Density plot with confidence interval filled in}
 \usage{
-denFill(dist, alpha = 0.05, alternative = c("two.sided", "less", "greater"),
-  col = "black", lwd = 2, transp = 0.3, add = FALSE, ...)
+denFill(dist, alpha = 0.05, alternative = c("two.sided", "less",
+  "greater"), col = "black", lwd = 2, transp = 0.3, add = FALSE,
+  ...)
 }
 \arguments{
 \item{dist}{numeric vector for which density is to be plotted}
