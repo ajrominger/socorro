@@ -4,14 +4,16 @@
 \alias{logAxis}
 \title{Log axes}
 \usage{
-logAxis(side, expLab = FALSE, ...)
+logAxis(side, expLab = FALSE, minor = TRUE, ...)
 }
 \arguments{
 \item{side}{the side on which to add an axis (following \code{axis}, but taking vectors
 of length grater than 1, e.g. \code{1:2})}
 
 \item{expLab}{logical, should axis labels be in exponential form (e.g. \eqn{10^1}; 
-\code{expLab = TRUE}) 
+\code{expLab = TRUE})}
+
+\item{minor}{logical, should minor tick marks be added
 or in standard form (\code{expLab = FALSE}, the default)}
 
 \item{...}{arguments passed to \code{axis}}

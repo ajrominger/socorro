@@ -9,6 +9,7 @@
 #' of length grater than 1, e.g. \code{1:2})
 #' @param expLab logical, should axis labels be in exponential form (e.g. \eqn{10^1}; 
 #' \code{expLab = TRUE}) 
+#' @param minor logical, should minor tick marks be added
 #' or in standard form (\code{expLab = FALSE}, the default)
 #' @param ... arguments passed to \code{axis}
 #' 
@@ -20,7 +21,7 @@
 #' @seealso axis, plot
 #' @export
 
-logAxis <- function(side, expLab = FALSE, ...) {
+logAxis <- function(side, expLab = FALSE, minor = TRUE, ...) {
 	if(length(side) > 1) {
 	    foo <- lapply(side, function(i) logAxis(i, expLab, ...))
 	} else {
@@ -39,6 +40,8 @@ logAxis <- function(side, expLab = FALSE, ...) {
 	    } else {
 	        noMinor <- FALSE
 	    }
+	    
+	    if(!minor) noMinor <- TRUE
 	    
 	    if(expLab) {
 	        labels <- sapply(maj.minX:maj.maxX, 
