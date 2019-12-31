@@ -23,7 +23,7 @@
 
 logAxis <- function(side, expLab = FALSE, minor = TRUE, ...) {
 	if(length(side) > 1) {
-	    foo <- lapply(side, function(i) logAxis(i, expLab, ...))
+	    foo <- lapply(side, function(i) logAxis(i, expLab, minor, ...))
 	} else {
 	    if(side %in% c(1, 3)) {
 	        usr <- graphics::par('usr')[1:2]
@@ -44,14 +44,15 @@ logAxis <- function(side, expLab = FALSE, minor = TRUE, ...) {
 	    if(!minor) noMinor <- TRUE
 	    
 	    if(expLab) {
-	        labels <- sapply(maj.minX:maj.maxX, 
+	        labels <- sapply(maj.seq, 
 	                         function(p) eval(substitute(expression(10^p), 
 	                                                     list(p = p))))
+	        
 	    } else {
 	        labels <- TRUE
 	    }
 	    
-	    graphics::axis(side, at=10^(maj.minX:maj.maxX), labels = labels, ...)
+	    graphics::axis(side, at=10^(maj.seq), labels = labels, ...)
 	    
 	    if(!noMinor) {
 	        if(maj.minX - usr[1] >= log(2, 10)) {
